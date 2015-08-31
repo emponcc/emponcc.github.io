@@ -31,6 +31,6 @@ The basic idea is easy to comprehend - if there is a program which is failed on 
 ###<h2 id="3"> Data </h2>
 
 ###<h2 id="4"> Contributors </h2>
-Contributors to the implementation of LET are:   
+Contributors to the implementation are:   
 Junjie Chen   
 Wenxiang Hu  
