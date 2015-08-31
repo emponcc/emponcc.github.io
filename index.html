@@ -310,8 +310,8 @@ sup {
 
 <p><a href="#1">1.Intro</a><br>
 <a href="#2">2.Measurement</a><br>
-<a href="#3">3.Downloads</a><br>
-<a href="#4">4. Contributors</a> </p>
+<a href="#3">3.Data</a><br>
+<a href="#4">4.Contributors</a> </p>
 
 <h3 id="toc_1"><h2 id="1">Intro</h2></h3>
 
@@ -335,7 +335,7 @@ sup {
 </blockquote></li>
 </ul>
 
-<h3 id="toc_2"><h2 id="1">Measurement</h2></h3>
+<h3 id="toc_2"><h2 id="2">Measurement</h2></h3>
 
 <p>Our study is based on the analyze of actual bugs each method may find, apperently we need the number of bugs to be more accurate. Former means are way not accurate enough, so we find out that we can use the &quot;commit id“ to identify each bugs while there are many corresponding programs.   </p>
 
@@ -352,12 +352,17 @@ sup {
 </ul>
 </blockquote>
 
-<h3 id="toc_3"><h2 id="3"> Contributors </h2></h3>
+<h4 id="toc_3">Source Code :</h4>
+
+<p><a href="./file/check_compiler_llvm+clang.py">For LLVM</a>: Because the LLVM repository and Clang repository are not together so we use Clang&#39;s commit id as result. Due to the splited repositories, here is a problem to find out which LLVM and which Clang works together, so we try to match  nearest commits between LLVM and Clang, if they&#39;re not woking, we&#39;ll try another pair.</p>
+
+<h3 id="toc_4"><h2 id="3"> Data </h2></h3>
+
+<h3 id="toc_5"><h2 id="4"> Contributors </h2></h3>
 
 <p>Contributors to the implementation of LET are:<br>
 Junjie Chen<br>
-Wenxiang Hu<br>
-Yanwei Bai   </p>
+Wenxiang Hu  </p>
 
 
 </body>
