@@ -306,14 +306,16 @@ sup {
 <body>
 <h2 id="toc_0">An Empirical Comparison of Compiler Testing Techniques</h2>
 
-<p><em>update:2015-08-31 under_construction</em>  </p>
+<p><em>update:2015-08-31</em>  </p>
 
-<p><a href="#1">1.Intro</a> <a href="#2">2.Measurement Detail</a> <a href="#3">2.Download</a>  </p>
+<p><a href="#1">1.Intro</a><br>
+<a href="#2">2.Measurement</a><br>
+<a href="#3">3.Downloads</a><br>
+<a href="#4">4. Contributors</a> </p>
 
 <h3 id="toc_1"><h2 id="1">Intro</h2></h3>
 
-<p>Modern compilers are usually using the stress testing. Generally we produce many test programs on purpose and run compiler(s) compiling the programs under different configurations, thus we&#39;ll probe the reason once the compiler fails.<br>
-The comparison we perfomed is on current compiler testing techniques,including RDT DOL and EMI, which are descripted as follows,   </p>
+<p>Modern compilers are usually using the stress testing, generally we produce many test programs on purpose and run compiler(s) compiling the programs under different configurations, thus we&#39;ll probe the reason once the compiler fails.The comparison we perfomed is on current compiler testing techniques,including RDT DOL and EMI, which are descripted as follows,   </p>
 
 <ul>
 <li><p><em>RDT</em>, randomized differential testing, assumes that assumes that several comparable compilers are implemented based on the same speciﬁcation and detects bugs by comparing the outputs of these compilers for the same test program.</p>
@@ -333,9 +335,29 @@ The comparison we perfomed is on current compiler testing techniques,including R
 </blockquote></li>
 </ul>
 
-<h3 id="toc_2"><h2 id="1">Measurement Detail</h2></h3>
+<h3 id="toc_2"><h2 id="1">Measurement</h2></h3>
 
-<p>Our study is based on the analyze of actual bugs each method may find. So the number of bugs is more accurate the better. Formal ways are accurate enough.</p>
+<p>Our study is based on the analyze of actual bugs each method may find, apperently we need the number of bugs to be more accurate. Former means are way not accurate enough, so we find out that we can use the &quot;commit id“ to identify each bugs while there are many corresponding programs.   </p>
+
+<blockquote>
+<p>We use git repository here because it is a distributed revision control system thus we have almost all commits locally and avoid downloading when checkout a specific commit version.</p>
+</blockquote>
+
+<p>The basic idea is easy to comprehend - if there is a program which is failed on a version but works on a latter version, here must be a version of compiler between these two versions that the change of source code fix this bug(s).   </p>
+
+<blockquote>
+<ul>
+<li>GCC provides a git mirror of its svn repository.You can access its repository here <a href="https://gcc.gnu.org/wiki/GitMirror">https://gcc.gnu.org/wiki/GitMirror</a>.</li>
+<li>LLVM and Clang&#39;s git mirrors are at <a href="http://llvm.org/docs/GettingStarted.html#git-mirror">http://llvm.org/docs/GettingStarted.html#git-mirror</a></li>
+</ul>
+</blockquote>
+
+<h3 id="toc_3"><h2 id="3"> Contributors </h2></h3>
+
+<p>Contributors to the implementation of LET are:<br>
+Junjie Chen<br>
+Wenxiang Hu<br>
+Yanwei Bai   </p>
 
 
 </body>
